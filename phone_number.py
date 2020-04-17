@@ -1,3 +1,6 @@
+"""Takes a string of numbers from a user and outputs a list of possible english character 
+representations of those numbers -- I am in highschool and am not super experienced with Python
+As such, there may be a number of inefficiences -- I am not sure if copy is needed?"""
 from copy import copy
 pNumber = list(input())
 # the ASCII character value right below 'a'
@@ -21,7 +24,7 @@ for i in range(2, 10):
         numToLet[str(i)] = ls
 # construct possibilities list
 possibilities = []
-# takes the user input string of numbers and modifies it bit by bit according to the loc (int) position
+# takes the user input string of numbers and modifies it character by character (recursively) according to the loc (int) position
 def do(pNumber, loc):
     if loc < len(pNumber):
         letters = numToLet[pNumber[loc]]
