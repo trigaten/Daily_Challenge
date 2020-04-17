@@ -1,7 +1,7 @@
 """Takes a string of numbers from a user and outputs a list of possible english character 
 representations of those numbers -- I am in highschool and am not super experienced with Python
 As such, there may be a number of inefficiences -- I am not sure if copy is needed?
-
+Please lmk if anything is done poorly -- I'd like to learn
 Throws ERROR if digit !member of [2, 9] is input
 """
 from copy import copy
