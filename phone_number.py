@@ -1,11 +1,15 @@
 """Takes a string of numbers from a user and outputs a list of possible english character 
 representations of those numbers -- I am in highschool and am not super experienced with Python
-As such, there may be a number of inefficiences -- I am not sure if copy is needed?"""
+As such, there may be a number of inefficiences -- I am not sure if copy is needed?
+
+Throws ERROR if digit !member of [2, 9] is input
+"""
 from copy import copy
+# gets the string of numbers from user and makes it into a list
 pNumber = list(input())
 # the ASCII character value right below 'a'
 chrLoc = 96
-# construct dictionary 
+# construct dictionary of mappings from number to its 3 or 4 possible letters
 numToLet = {}
 for i in range(2, 10):
     # if there are 4 letters for this number
@@ -22,7 +26,8 @@ for i in range(2, 10):
             chrLoc+=1
             ls.append(chr(chrLoc))
         numToLet[str(i)] = ls
-# construct possibilities list
+
+# construct list of possible character representations of the numerical string
 possibilities = []
 # takes the user input string of numbers and modifies it character by character (recursively) according to the loc (int) position
 def do(pNumber, loc):
