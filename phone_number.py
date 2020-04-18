@@ -13,7 +13,7 @@ chrLoc = 96
 numToLet = {}
 for i in range(2, 10):
     # if there are 4 letters for this number
-    if i is 7 or i is 9:
+    if i == 7 or i == 9:
         ls = []
         for j in range(4):
             chrLoc+=1
